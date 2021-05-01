@@ -1,0 +1,36 @@
+% Caution!
+
+% untuk mengedit dokumen, cukup edit file pada bagian :
+% /src/chapter
+% /src/citation
+% /src/image
+
+% jangan edit bagian dibawah ini kecuali anda tahu apa yang anda perbuat.
+
+
+\documentclass{Proposal_Class}
+
+\usepackage{lipsum}
+
+\input{src/chapter/document_info.tex}
+
+\begin{document}
+
+    \input{./src/chapter/p0-cover.tex}
+    \input{./src/chapter/p1-pengesahan.tex}
+    \input{./src/chapter/p2-abstrak.tex}
+
+    \tableofcontents
+    \listoffigures
+    \listoftables
+
+    \input{src/chapter/s1-pendahuluan.tex}
+    \input{src/chapter/s2-kajian_pustaka.tex}
+    \input{src/chapter/s3-metodologi_penelitian.tex}
+    \input{src/chapter/s4-rencana_dan_jadwal_kegiatan.tex}
+
+    \bibliography{./src/citation/citation.bib}
+    \bibliographystyle{ieeetr}
+    \addcontentsline{toc}{chapter}{Daftar Pustaka}
+
+\end{document}

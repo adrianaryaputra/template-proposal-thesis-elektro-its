@@ -1,0 +1,123 @@
+\chapter{Kajian Pusataka}{
+    \lipsum[4]
+}
+
+
+\section{Kajian Penelitian Terkait}{
+    \lipsum[6]
+    \begin{f_enumerate}
+        \item contoh item satu, boleh panjang boleh pendek. contoh item satu, boleh panjang boleh pendek. contoh item satu, boleh panjang boleh pendek. contoh item satu, boleh panjang boleh pendek.
+        \item contoh item satu, boleh panjang boleh pendek. contoh item satu, boleh panjang boleh pendek. contoh item satu, boleh panjang boleh pendek. contoh item satu, boleh panjang boleh pendek.
+        \item contoh item satu, boleh panjang boleh pendek. contoh item satu, boleh panjang boleh pendek. contoh item satu, boleh panjang boleh pendek. contoh item satu, boleh panjang boleh pendek.
+    \end{f_enumerate}
+    \lipsum[2]
+}
+
+
+\section{Teori Dasar}{
+    \lipsum[9-11]
+}
+
+\subsection{Cara Membuat Gambar}{
+    Untuk menambahkan gambar, simpan gambar dalam folder ./src/image/. Gambar akan diletakkan secara otomatis di tempat yang paling sesuai. cukup tulis perintah latex berikut. setelah itu gambar dapat direferensikan dengan cara menuliskannya seperti \refgbr{fig: lambang its}.
+    % SATU GAMBAR DEGAN LABEL 
+    \begin{figure}
+        \centering
+        \includegraphics[width=.3\textwidth]{src/image/its-lambang.png}
+        \caption{Lambang ITS}
+        \label{fig: lambang its}
+    \end{figure}
+
+    Beberapa gambar dapat ditampilkan secara bersamaan menggunakan subfigure. dan dapat dikutip sebagian, seperti \refgbr{fig:lambang its a}, atau bisa juga hanya diambil penomoran subfigurnya seperti \ref{sub@fig:lambang its b}, atau figurnya secara keseluruhan \refgbr{fig:lambang its semua}.
+    \begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.3\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{src/image/its-lambang.png}
+            \caption{Lambang ITS}
+            \label{fig:lambang its a}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{src/image/its-lambang.png}
+            \caption{Lambang ITS juga}
+            \label{fig:lambang its b}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{src/image/its-lambang.png}
+            \caption{Lambang ITS lagi}
+            \label{fig:lambang its c}
+        \end{subfigure}
+        \caption{Lambang-Lambang ITS}
+        \label{fig:lambang its semua}
+    \end{figure}    
+}
+
+\subsection{Cara Membuat Tabel}{
+    Di segmen ini akan ditampilkan berbagai macam cara untuk membuat tabel. Untuk membuat tabel kita dapat menggunakan script dibawah ini. 
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{| l | l | l |}
+            \hline
+            A & B & C \\
+            \hline
+            1 & 2 & 3 \\
+            4 & 5 & 6 \\
+            \hline
+        \end{tabular}
+        \caption{Tabel sangat sederhana}
+        \label{tab:abc}
+    \end{table}
+
+    \begin{table}[h]
+        \begin{subtable}[h]{0.45\textwidth}
+            \centering
+            \begin{tabular}{l | l | l}
+            Day & Max Temp & Min Temp \\
+            \hline \hline
+            Mon & 20 & 13\\
+            Tue & 22 & 14\\
+            Wed & 23 & 12\\
+            Thurs & 25 & 13\\
+            Fri & 18 & 7\\
+            Sat & 15 & 13\\
+            Sun & 20 & 13
+           \end{tabular}
+           \caption{First Week}
+           \label{tab:week1}
+        \end{subtable}
+        \hfill
+        \begin{subtable}[h]{0.45\textwidth}
+            \centering
+            \begin{tabular}{l | l | l}
+            Day & Max Temp & Min Temp \\
+            \hline \hline
+            Mon & 17 & 11\\
+            Tue & 16 & 10\\
+            Wed & 14 & 8\\
+            Thurs & 12 & 5\\
+            Fri & 15 & 7\\
+            Sat & 16 & 12\\
+            Sun & 15 & 9
+            \end{tabular}
+            \caption{Second Week}
+            \label{tab:week2}
+         \end{subtable}
+         \caption{Suhu max dan min di bulan Juni}
+         \label{tab:temps}
+    \end{table}
+}
+
+\subsection{Cara Melakukan sitasi}{
+    Sitasi dapat dilakukan menggunakan command \cite{han_heo_park_kee_sunwoo_2016}.
+    \lipsum[2]
+}
+
+\subsection{Theory 1}{
+    \lipsum[6-8]
+}
+
+\subsection{Theory 2}{
+    \lipsum[6-8]
+}

@@ -1,0 +1,51 @@
+\docDefaultSpacing
+
+\begin{titlepage}
+
+    \pagenumbering{roman}
+    \setcounter{page}{1}
+    
+    \thispagestyle{empty}
+
+    % LAMBANG ITS
+    \begin{tikzpicture}[overlay,remember picture] 
+        \node[anchor=north west, shift={(64mm, 5mm)}] at (current page.north west){\includegraphics[width=35mm]{src/image/its-lambang.png}}; 
+    \end{tikzpicture}
+    
+    % GARIS KUNING
+    \begin{tikzpicture}[overlay,remember picture] 
+        \node[anchor=north west, shift={(24mm, -45mm)}] at (current page.north west){\includegraphics[width=210mm]{src/image/garis-kuning.png}}; 
+    \end{tikzpicture}
+
+    % TEKS SAMPUL
+    \begin{flushleft}
+        \vspace{\coverSpacing}
+        \textbf{PROPOSAL THESIS}
+    \end{flushleft}
+
+    \vspace{-2mm}\Large
+    \begin{flushleft}\textbf{\MakeUppercase{\judulThesis}}\end{flushleft}
+
+    \vspace{10mm}
+    \begin{flushleft}
+        \normalsize
+        \MakeUppercase{\mahasiswaNama} \\
+        \MakeUppercase{\mahasiswaNRP} \\
+        \vspace{1em}
+        DOSEN PEMBIMBING \\
+        \pembimbingSatuNama \\
+        \pembimbingDuaNama \\
+        \vspace{1em}
+        PROGRAM MAGISTER \\
+        BIDANG KEAHLIAN \MakeUppercase{\bidangKeahlian} \\
+        DEPARTEMEN \MakeUppercase{\departemen} \\
+        FAKULTAS \MakeUppercase{\fakultas} \\
+        INSTITUT TEKNOLOGI SEPULUH NOPEMBER \\
+        SURABAYA \\
+        \tahunPenulisan
+    \end{flushleft}
+
+    
+\end{titlepage}
+
+% \restoregeometry{}
