@@ -58,6 +58,8 @@
     Di segmen ini akan ditampilkan berbagai macam cara untuk membuat tabel. Untuk membuat tabel kita dapat menggunakan script dibawah ini. 
     \begin{table}[h]
         \centering
+        \caption{Tabel sangat sederhana}
+        \label{tab:abc}
         \begin{tabular}{| l | l | l |}
             \hline
             A & B & C \\
@@ -66,11 +68,12 @@
             4 & 5 & 6 \\
             \hline
         \end{tabular}
-        \caption{Tabel sangat sederhana}
-        \label{tab:abc}
     \end{table}
 
     \begin{table}[h]
+        \centering
+        \caption{Suhu max dan min di bulan Juni}
+        \label{tab:temps}
         \begin{subtable}[h]{0.45\textwidth}
             \centering
             \begin{tabular}{l | l | l}
@@ -104,8 +107,6 @@
             \caption{Second Week}
             \label{tab:week2}
          \end{subtable}
-         \caption{Suhu max dan min di bulan Juni}
-         \label{tab:temps}
     \end{table}
 }
 
@@ -114,9 +115,33 @@
     \lipsum[2]
 }
 
-\subsection{Theory 1}{
-    \lipsum[6-8]
-}
+\subsection{Theory 1}
+    \lipsum[6]
+    \begin{equation}
+        \begin{array}{l}
+        L=-\frac{1}{2}\left[\begin{array}{ll}
+        x_{1} & x_{2}
+        \end{array}\right]\left[\begin{array}{ll}
+        2 & -1 \\
+        -1 & 2
+        \end{array}\right]\left[\begin{array}{l}
+        x_{1} \\
+        x_{2}
+        \end{array}\right]+\left[\begin{array}{ll}
+        3 & 0
+        \end{array}\right]\left[\begin{array}{l}
+        x_{1} \\
+        x_{2}
+        \end{array}\right] \\
+        L_{u u}=\left[\begin{array}{ll}
+        2 & -1 \\
+        -1 & 2
+        \end{array}\right]>0
+        \end{array}
+        \label{eq: test}
+    \end{equation}
+    terus di quotes sebagai \refeq{eq: test}.
+    \lipsum[7-8]
 
 \subsection{Theory 2}{
     \lipsum[6-8]

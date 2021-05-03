@@ -30,6 +30,13 @@
 \RequirePackage{caption}
 \RequirePackage{subcaption}
 
+
+\captionsetup[figure]{labelfont=bf} % bold label dari gambar
+\captionsetup[figure]{font=small} % resize ukuran font
+\captionsetup[table]{labelfont=bf} % bold label dari tabel
+\captionsetup[table]{font=small} % resize ukuran font
+
+
 \setlength{\hoffset}{-1in}
 \setlength{\evensidemargin}{30mm}
 \setlength{\oddsidemargin}{40mm}
@@ -59,7 +66,7 @@
 \titleformat{\chapter}[display]
     {\normalsize \normalsize \bfseries}
     {\centering \large \MakeUppercase BAB \thechapter }{-.5em}{\large \centering}
-\titlespacing*{\chapter}{0pt}{-20pt}{0pt}
+\titlespacing*{\chapter}{0pt}{-20pt}{1em}
 
 \titleformat{\section}
     {\normalsize \normalsize \bfseries \color{black}}
@@ -89,7 +96,7 @@
 \titlecontents{subsection}
     [2em]
     {\vspace{0pt}}%
-    {\thecontentslabel.\enspace}%numbered sections
+    {\thecontentslabel.\enspace}%numbered subsections
     {}%numberless section
     {\titlerule*[0.5pc]{.}\contentspage}%
 
@@ -119,6 +126,8 @@
 
 
 \newcommand{\refgbr}[1]{Gambar \ref{#1}}
+\newcommand{\refeq}[1]{(\ref{#1})}
+
 
 \makeatletter
     \def\cleardoublepage{\clearpage%
@@ -137,3 +146,8 @@
         \fi
     }
 \makeatother
+
+
+%% custom command
+\def\docContentSpacing{\setlength{\parskip}{.25em}\renewcommand{\baselinestretch}{1.15}}
+\def\docDefaultSpacing{\setlength{\parskip}{0em}\renewcommand{\baselinestretch}{1}}
